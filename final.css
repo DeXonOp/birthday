@@ -1,0 +1,104 @@
+body{
+    margin:0;
+    font-family:Segoe UI, sans-serif;
+    background: linear-gradient(135deg,#fff5f7,#ffeef2,#fff0f5);
+    overflow:hidden;
+}
+
+/* Center everything */
+.center{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+/* Cake */
+.cake{
+    display:flex;
+    flex-direction:column-reverse;   /* THIS IS THE SECRET FIX */
+    align-items:center;
+    margin-top:40px;
+    position:relative;
+}
+
+/* Layers */
+.layer{
+    height:80px;
+    border-radius:20px;
+}
+
+.l1{width:260px;background:#ff6b81;}
+.l2{width:200px;background:#ff8fb1;margin-bottom:-15px;}
+.l3{width:140px;background:#ffb6c1;margin-bottom:-15px;}
+
+/* Candle */
+.candle{
+    width:16px;
+    height:60px;
+    background:white;
+    border-radius:4px;
+    position:relative;
+    margin-bottom:1px;
+    cursor:pointer;
+}
+
+/* Flame */
+.flame{
+    width:16px;
+    height:26px;
+    background:orange;
+    border-radius:50%;
+    position:absolute;
+    top:-22px;
+    left:5%;
+    transform:translateX(-50%);
+    opacity:0;
+    animation:flicker .2s infinite alternate;
+}
+
+
+@keyframes flicker{
+    from{transform:scale(1);}
+    to{transform:scale(1.2);}
+}
+
+/* Emoji background */
+.emoji-bg{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.emoji{
+    position:absolute;
+    bottom:-50px;
+    font-size:28px;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp{
+    from{transform:translateY(0);}
+    to{transform:translateY(-120vh);}
+}
+
+/* Fireworks canvas */
+#realFireworks{
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+
+/* Keep cake above fireworks */
+.center, .cake{
+    position:relative;
+    z-index:2;
+}

@@ -1,0 +1,22 @@
+body{
+    margin:0;
+    font-family:Segoe UI;
+    background:linear-gradient(135deg,#fff5f7,#ffeef2);
+    overflow:hidden;
+}
+.center{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ff4e88;
+    color:white;
+    font-size:18px;
+}
+.emoji-bg{position:fixed;inset:0;z-index:-1;}

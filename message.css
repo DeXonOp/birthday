@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ece9e9, #f1f0f0);
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* same center style */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+/* message card */
+.message-box {
+    background: rgba(24, 22, 22, 0.15);
+    padding: 30px 35px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    backdrop-filter: blur(8px);
+}
+
+.message-box h2 {
+    margin-bottom: 15px;
+}
+
+.message-box p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* button */
+button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #ff4f8b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff2f73;
+}

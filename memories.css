@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #fff5e6);
+    text-align: center;
+}
+
+.title {
+    padding: 20px;
+    color: #444;
+}
+
+/* GRID */
+.gifts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding: 30px;
+    justify-items: center;
+}
+
+/* 🔥 PORTRAIT GIFT SIZE (important) */
+.gift {
+    position: relative;
+    width: 400px;      /* bigger width */
+    height: 600px;     /* bigger height */
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+/* BOX */
+.box {
+    width: 100%;
+    height: 100%;
+    background: #ff4d6d;
+    border-radius: 18px;
+}
+
+/* LID */
+.lid {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background: #ff758f;
+    top: 0;
+    border-radius: 18px 18px 0 0;
+    transition: transform 0.8s ease;
+    transform-origin: top;
+    z-index: 2;
+}
+
+.gift.open .lid {
+    transform: rotateX(130deg);
+}
+
+/* ✅ IMAGE PERFECT FIT */
+.memory-img {
+    position: absolute;
+    top: 100px;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: 400px;
+    object-fit: contain;   /* IMPORTANT CHANGE */
+    background: white;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    z-index: 1;
+}
+
+/* CAPTION */
+.caption {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    font-size: 15px;
+    padding: 0 10px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.gift.open .memory-img,
+.gift.open .caption {
+    opacity: 1;
+}
+
+/* BUTTON */
+#nextBtn {
+    margin: 50px auto;
+    padding: 14px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background: #ff4d6d;
+    color: white;
+    display: none;
+}
