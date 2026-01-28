@@ -27,9 +27,10 @@ candle.addEventListener("click", () => {
         flame.style.opacity = "0";
 
 
-        hint.innerText = `Happy Birthday Anita ❤️
-May your day be as beautiful as your smile
-and your year be filled with happiness ✨`;
+        hint.innerText = `Happy 22nd Birthday Anita ❤️
+        Today is your day,
+        May your day be as beautiful as your smile
+        and your year be filled with happiness ✨`;
 
         startFireworks();
     }
@@ -182,4 +183,5 @@ function startFloatingEmojis(){
         setTimeout(()=>e.remove(),12000);
     },600);
 }
+
 
